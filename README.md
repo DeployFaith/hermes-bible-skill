@@ -109,3 +109,40 @@ Use both together for complete Hermes expertise.
 ## License
 
 MIT — The content is sourced from [The Hermes Bible](https://www.hermesbible.com), an unofficial community project. Original documentation is the property of [Nous Research](https://nousresearch.com).
+
+## Self-Updating
+
+The skill includes a self-updater script that fetches the latest content from hermesbible.com's `llms.txt` file and updates the reference files automatically.
+
+### Manual Update
+
+```bash
+# Dry run (see what would change)
+python3 scripts/hermes-bible-updater.py --dry-run
+
+# Apply updates
+python3 scripts/hermes-bible-updater.py
+```
+
+### Automated Updates (Cron)
+
+Set up a cron job to run weekly:
+
+```bash
+# Copy the script to your Hermes scripts directory
+cp scripts/hermes-bible-updater.py ~/.hermes/scripts/
+
+# Create a cron job (runs every Monday at 3am)
+hermes cron create --name hermes-bible-updater \
+  --schedule "0 3 * * 1" \
+  --script hermes-bible-updater.py \
+  --no-agent
+```
+
+The updater will:
+1. Fetch the latest `llms.txt` from hermesbible.com
+2. Parse all docs and flows
+3. Compare with current reference files
+4. Update if there are changes
+5. Commit and push to the repo
+6. Report what changed
