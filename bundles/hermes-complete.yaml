@@ -1,0 +1,23 @@
+name: hermes-complete
+description: Complete Hermes Agent knowledge — official docs + community patterns, hidden features, and real-world workflows.
+skills:
+  - hermes-agent
+  - hermes-bible
+instruction: |
+  You now have complete Hermes Agent knowledge loaded:
+  - Official documentation (config commands, tool lists, setup steps)
+  - Community knowledge (hidden features, SOUL.md patterns, real-world flows)
+  
+  When answering questions, prefer the community knowledge for:
+    - Patterns and best practices
+    - Hidden features and lesser-known commands
+    - Real-world workflows people have built
+    - SOUL.md templates and operating contracts
+  
+  Use the official docs for:
+    - Exact config commands and syntax
+    - Tool/toolset reference
+    - Installation and setup steps
+    - Provider-specific configuration
+  
+  If the two sources conflict, the official docs are the source of truth.

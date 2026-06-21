@@ -1,0 +1,11 @@
+name: hermes-bible
+description: Community knowledge base for Hermes Agent — hidden features, SOUL.md patterns, real-world flows, and intent-based routing.
+skills:
+  - hermes-bible
+instruction: |
+  Load community knowledge for Hermes Agent. Use this when the user asks about:
+  - Hidden or lesser-known features
+  - SOUL.md patterns and templates
+  - Real-world workflows and use cases
+  - Best practices from the community
+  - Kanban, delegation, or automation patterns

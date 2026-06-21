@@ -16,20 +16,35 @@ Source: [The Hermes Bible](https://www.hermesbible.com) · Built by [iamlukethed
 
 ## Installation
 
-Copy the `hermes-bible/` directory into your Hermes skills folder:
+### Option 1: Copy the skill
 
 ```bash
 # Clone the repo
 git clone https://github.com/DeployFaith/hermes-bible-skill.git
 
 # Copy to your skills directory
-cp -r hermes-bible-skill ~/.hermes/profiles/default/skills/hermes-bible
+cp -r hermes-bible-skill/SKILL.md hermes-bible-skill/references ~/.hermes/profiles/default/skills/hermes-bible/
 ```
 
 Or for a specific profile:
 
 ```bash
-cp -r hermes-bible-skill ~/.hermes/profiles/YOUR_PROFILE/skills/hermes-bible
+cp -r hermes-bible-skill/SKILL.md hermes-bible-skill/references ~/.hermes/profiles/YOUR_PROFILE/skills/hermes-bible/
+```
+
+### Option 2: Install with Hermes CLI
+
+```bash
+hermes skills install https://github.com/DeployFaith/hermes-bible-skill
+```
+
+### Option 3: Use the bundle (loads both official + community docs)
+
+```bash
+# Copy the bundle file
+cp hermes-bible-skill/bundles/hermes-complete.yaml ~/.hermes/skill-bundles/
+
+# Now /hermes-complete loads both hermes-agent AND hermes-bible together
 ```
 
 ## What It Covers
@@ -57,6 +72,22 @@ Full template for making your agent behave like an operator, not a chatbot.
 
 ### Documentation Index
 169 pages across 10 sections — Getting Started, Core Features, Messaging, Secrets, Skills, Using Hermes, Integrations, Guides, Developer Guide, Reference.
+
+## Bundles
+
+The `bundles/` directory contains ready-to-use skill bundles:
+
+| Bundle | What it does |
+|--------|--------------|
+| `hermes-bible.yaml` | Loads just the community knowledge skill |
+| `hermes-complete.yaml` | Loads both official docs AND community knowledge together |
+
+Install a bundle:
+```bash
+cp bundles/hermes-complete.yaml ~/.hermes/skill-bundles/
+```
+
+Then use `/hermes-complete` in chat to load both skills at once.
 
 ## How It Works
 
