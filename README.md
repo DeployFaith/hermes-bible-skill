@@ -10,41 +10,71 @@ Source: [The Hermes Bible](https://www.hermesbible.com) · Built by [iamlukethed
 |------|--------------|
 | `SKILL.md` | Main skill file — router with embedded knowledge, flows catalog, intent mappings |
 | `references/patterns.md` | SOUL.md templates, delegation patterns, kanban concepts, cron patterns |
-| `references/flows-catalog.md` | 21 real-world flows with intent-based routing |
+| `references/flows-catalog.md` | 26 real-world flows with intent-based routing |
 | `references/hidden-features.md` | 8 community-sourced hidden Hermes features |
 | `references/index.md` | Full 169-page documentation index with URLs |
+| `references/llms-full.md` | Sanitized full-corpus markdown export from `llms-full.txt` for broad audits/offline lookup |
 
 ## Installation
 
-### Option 1: Copy the skill
+Supported install modes:
+
+1. **Full install (recommended):** clone + copy the full skill directory. This preserves `SKILL.md` and linked `references/` files.
+2. **Light install:** install the raw `SKILL.md` URL. This is useful for quick access, but linked reference files are not included.
+3. **Bundles:** optional slash-command shortcuts for already-installed skills. Bundles do not install the skills they reference.
+
+### Recommended: clone + copy the full skill
+
+This is the recommended install path because it copies both `SKILL.md` and the linked `references/` files.
 
 ```bash
 # Clone the repo
 git clone https://github.com/DeployFaith/hermes-bible-skill.git
+cd hermes-bible-skill
 
-# Copy to your skills directory
-cp -r hermes-bible-skill/SKILL.md hermes-bible-skill/references ~/.hermes/profiles/default/skills/hermes-bible/
+# Install into the default Hermes home
+mkdir -p ~/.hermes/skills/hermes-bible
+cp -r SKILL.md references ~/.hermes/skills/hermes-bible/
 ```
 
-Or for a specific profile:
+For a named Hermes profile:
 
 ```bash
-cp -r hermes-bible-skill/SKILL.md hermes-bible-skill/references ~/.hermes/profiles/YOUR_PROFILE/skills/hermes-bible/
+PROFILE=YOUR_PROFILE
+mkdir -p ~/.hermes/profiles/$PROFILE/skills/hermes-bible
+cp -r SKILL.md references ~/.hermes/profiles/$PROFILE/skills/hermes-bible/
 ```
 
-### Option 2: Install with Hermes CLI
+After copying, start a new Hermes session or run `/reload-skills` in a supported interactive surface.
+
+### Light install: main skill only
+
+Hermes can install a direct URL to the raw `SKILL.md` file:
 
 ```bash
-hermes skills install https://github.com/DeployFaith/hermes-bible-skill
+hermes skills install https://raw.githubusercontent.com/DeployFaith/hermes-bible-skill/main/SKILL.md
 ```
 
-### Option 3: Use the bundle (loads both official + community docs)
+This installs only `SKILL.md`. Hermes fetches the skill file; it does not clone this repository or install `references/`, `bundles/`, or `scripts/`. The clone + copy method above is recommended for the complete experience. In light mode, agents can still answer from the embedded routing tables and fetch live content from `llms.txt`, `llms-full.txt`, or specific page URLs when tools permit.
+
+### Optional: install a bundle
+
+Bundles add slash commands that load one or more already-installed skills. Install `hermes-bible` first, then copy a bundle file:
 
 ```bash
-# Copy the bundle file
-cp hermes-bible-skill/bundles/hermes-complete.yaml ~/.hermes/skill-bundles/
+mkdir -p ~/.hermes/skill-bundles
+cp bundles/hermes-complete.yaml ~/.hermes/skill-bundles/
+hermes bundles reload
+```
 
-# Now /hermes-complete loads both hermes-agent AND hermes-bible together
+Now `/hermes-complete` loads both `hermes-agent` and `hermes-bible` together, assuming both skills are installed.
+
+For a named profile, place the bundle under that profile's Hermes home:
+
+```bash
+PROFILE=YOUR_PROFILE
+mkdir -p ~/.hermes/profiles/$PROFILE/skill-bundles
+cp bundles/hermes-complete.yaml ~/.hermes/profiles/$PROFILE/skill-bundles/
 ```
 
 ## What It Covers
@@ -66,9 +96,10 @@ Full template for making your agent behave like an operator, not a chatbot.
 - 4 Agents → PRs for $12 (Jira automation)
 - 9-Hour Overnight Workflow
 - /goal Playbook (21 workflows)
+- The 15 Levels of Hermes Agent Usage
 - Polymarket trading agent
 - Kanban mastery
-- And 16 more...
+- And 20 more...
 
 ### Documentation Index
 169 pages across 10 sections — Getting Started, Core Features, Messaging, Secrets, Skills, Using Hermes, Integrations, Guides, Developer Guide, Reference.
@@ -84,10 +115,20 @@ The `bundles/` directory contains ready-to-use skill bundles:
 
 Install a bundle:
 ```bash
+mkdir -p ~/.hermes/skill-bundles
 cp bundles/hermes-complete.yaml ~/.hermes/skill-bundles/
+hermes bundles reload
 ```
 
-Then use `/hermes-complete` in chat to load both skills at once.
+Then use `/hermes-complete` in chat to load both skills at once. Bundles reference installed skills; install `hermes-bible` first for `/hermes-complete` to load it successfully.
+
+For a named profile, place the bundle under that profile's Hermes home:
+
+```bash
+PROFILE=YOUR_PROFILE
+mkdir -p ~/.hermes/profiles/$PROFILE/skill-bundles
+cp bundles/hermes-complete.yaml ~/.hermes/profiles/$PROFILE/skill-bundles/
+```
 
 ## How It Works
 
@@ -97,7 +138,7 @@ The skill uses a **progressive disclosure** pattern:
 2. **Reference files** — loaded on demand via `skill_view` for deeper topics
 3. **Fetch-on-demand** — `web_extract` to hermesbible.com for specific pages
 
-This keeps token usage low (~4K for the main file) while having access to the full 169-page index.
+This keeps token usage low (~4K for the main file) while having access to the full 169-page index. The large `references/llms-full.md` corpus is available for broad audits and offline lookup, but should be loaded only when needed.
 
 ## Complementary Skills
 
@@ -112,27 +153,36 @@ MIT — The content is sourced from [The Hermes Bible](https://www.hermesbible.c
 
 ## Self-Updating
 
-The skill includes a self-updater script that fetches the latest content from hermesbible.com's `llms.txt` file and updates the reference files automatically.
+The skill includes a self-updater script that fetches the latest content from hermesbible.com's `llms.txt` and `llms-full.txt` files and updates the reference files automatically.
 
 ### Manual Update
 
 ```bash
-# Dry run (see what would change)
-python3 scripts/hermes-bible-updater.py --dry-run
+# Dry run (default; see what would change)
+python3 scripts/hermes-bible-updater.py --dry-run --verbose
 
-# Apply updates
-python3 scripts/hermes-bible-updater.py
+# Apply updates without committing or pushing
+python3 scripts/hermes-bible-updater.py --write
+
+# Apply updates and create a local commit
+python3 scripts/hermes-bible-updater.py --commit
+
+# Apply updates, commit, and push explicitly
+python3 scripts/hermes-bible-updater.py --commit --push
 ```
+
+By default the updater is safe: it reports changes but does not write, commit, or push unless you pass the corresponding flag. Commit mode stages only generated reference files, not the whole worktree; it must not use `git add -A`.
 
 ### Automated Updates (Cron)
 
-Set up a cron job to run weekly:
+Set up a cron job to check weekly:
 
 ```bash
 # Copy the script to your Hermes scripts directory
+mkdir -p ~/.hermes/scripts
 cp scripts/hermes-bible-updater.py ~/.hermes/scripts/
 
-# Create a cron job (runs every Monday at 3am)
+# Create a cron job (runs every Monday at 3am; dry-run/report only by default)
 hermes cron create --name hermes-bible-updater \
   --schedule "0 3 * * 1" \
   --script hermes-bible-updater.py \
@@ -142,7 +192,10 @@ hermes cron create --name hermes-bible-updater \
 The updater will:
 1. Fetch the latest `llms.txt` from hermesbible.com
 2. Parse all docs and flows
-3. Compare with current reference files
-4. Update if there are changes
-5. Commit and push to the repo
-6. Report what changed
+3. Compare generated reference files with current files
+4. Report new, removed, and changed content
+5. Refresh sanitized `references/llms-full.md` from `llms-full.txt` unless `--skip-full` is passed
+6. Redact credential-like assignment values before storing the full-corpus mirror
+7. Write only with `--write` or `--commit`
+8. Push only with explicit `--commit --push`
+9. Print a JSON summary suitable for cron notifications
