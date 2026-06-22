@@ -163,6 +163,44 @@ If `web_extract` fails, use browser to navigate and extract.
 
 ---
 
+## Self-Updating
+
+The Hermes Bible maintains an `llms.txt` file — a structured, LLM-friendly index of all docs and flows. The skill includes an updater script that fetches this and diffs against current references.
+
+**Script:** `scripts/hermes-bible-updater.py` (in the GitHub repo)
+**Cron:** Runs weekly (Monday 3am) via `hermes-bible-updater` cron job
+**Source:** `https://www.hermesbible.com/llms.txt`
+
+To update manually:
+```bash
+python3 scripts/hermes-bible-updater.py --dry-run  # see changes
+python3 scripts/hermes-bible-updater.py              # apply
+```
+
+The updater parses `llms.txt`, compares with `references/index.md` and `references/flows-catalog.md`, updates if changed, and pushes to the repo.
+
+## Skill Bundles
+
+Hermes bundles load multiple skills under one `/slash-command`. Bundles live in `~/.hermes/skill-bundles/*.yaml`.
+
+Format:
+```yaml
+name: bundle-name
+description: What the bundle does
+skills:
+  - skill-name-1
+  - skill-name-2
+instruction: |
+  Optional guidance injected above the skill bodies.
+```
+
+This skill ships two bundles in `bundles/`:
+- `hermes-bible.yaml` — standalone community knowledge
+- `hermes-complete.yaml` — loads both official docs + community knowledge
+
+Install: `cp bundles/hermes-complete.yaml ~/.hermes/skill-bundles/`
+Then use `/hermes-complete` in chat.
+
 ## Related Skills
 
 - `hermes-agent` — Official docs, config commands, tool lists, setup steps

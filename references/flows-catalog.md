@@ -1,6 +1,7 @@
 # Flows Catalog — Real Hermes Workflows
 
 Source: https://www.hermesbible.com/flows
+Last updated: 2026-06-22
 Community-built workflows, organized by category and intent.
 
 ---
@@ -9,112 +10,89 @@ Community-built workflows, organized by category and intent.
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| Hermes as Personal AI OS | Architecture for treating Hermes as your operating system — config, memory, tools, messaging, cron as OS primitives | `/flows/hermes-as-personal-ai-operating-system` |
-| 8 Loops That Compound | The feedback loops inside Hermes that make it better over time — memory, skills, goals, cron, sessions, profiles, delegation, self-improvement | `/flows/8-loops-inside-hermes-agent` |
+| Hermes Agent as a Personal AI Operating System | A layer-by-layer analysis of Hermes mapped to operating-system concepts — memory... | `/flows/hermes-as-personal-ai-operating-system` |
+| 8 Loops Inside Hermes Agent (And Why They Compound) | A complete map of the eight loops Hermes Agent runs simultaneously — from the mi... | `/flows/8-loops-inside-hermes-agent` |
 
 ## Automation
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| 9-Hour Overnight Workflow | Hour-by-hour map of the autonomous overnight cycle — self-improvement, knowledge ingestion, morning briefing, security layers | `/flows/hermes-9-hour-overnight-workflow` |
-| /goal Full Guide | Complete guide to the /goal system for autonomous agent workflows | `/flows/hermes-goal-the-full-guide` |
-| /goal Playbook (21 Workflows) | 21 concrete /goal workflow patterns for different use cases | `/flows/complete-goal-playbook-21-workflows` |
-| Hermes + xurl System | Making Hermes + xurl work as a real system for X/Twitter automation | `/flows/hermes-xurl-as-a-system` |
-| 10 Hacks for 24/7 System | Practical hacks to turn a chat agent into a 24/7 automation system | `/flows/10-hermes-hacks-24-7-system` |
-| Grok + Hermes + Telegram | Real-time X intelligence stack with Grok, Hermes, and Telegram | `/flows/grok-hermes-telegram-realtime-x-stack` |
+| How to Make Hermes + xurl Actually Work as a System | xurl gives your Hermes agent direct access to X — searching, reading, and publis... | `/flows/hermes-xurl-as-a-system` |
+| Hermes /goal — The Full Guide | A complete guide to Hermes' /goal command — what it does, every subcommand, how ... | `/flows/hermes-goal-the-full-guide` |
+| Hermes Agent Builds Itself While You Sleep: The Complete Guide to the 9-Hour Overnight Workflow | A full hour-by-hour map of the autonomous overnight cycle — from session close a... | `/flows/hermes-9-hour-overnight-workflow` |
+| Grok + Hermes + Telegram: A Real-Time X Intelligence Stack | Pair Grok's native real-time X access with Hermes Agent's persistent scheduling ... | `/flows/grok-hermes-telegram-realtime-x-stack` |
+| The Complete Hermes Agent /goal Playbook | 21 copy-paste /goal commands across 6 categories — research, lead gen, content, ... | `/flows/complete-goal-playbook-21-workflows` |
+| 10 Hermes Agent Hacks That Turned My Chat Agent Into a 24/7 System | Ten domain-agnostic Hermes setups — mission control, event triggers, cron jobs, ... | `/flows/10-hermes-hacks-24-7-system` |
 
 ## Configuration
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| SOUL.md Operating Contract | Sanitized, copy-paste SOUL.md template — operator contract, not personality hack | `/flows/soul-md-operating-contract-template` |
-| 170-Line SOUL.md | The system prompt that made a Hermes agent "dangerous" — detailed SOUL.md breakdown | `/flows/170-line-soul-md-that-made-hermes-dangerous` |
-| 50 Lines Matter More | Why your SOUL.md matters more than your model choice | `/flows/soul-md-why-50-lines-matter-more-than-your-model` |
-| 10 Real Settings | The 10 Hermes settings that actually matter (out of hundreds) | `/flows/10-hermes-settings-that-matter` |
+| Hermes Agent SOUL.md: Why 50 Lines Matter More Than Your Model | A complete guide to SOUL.md — where it sits in the prompt stack, what belongs in... | `/flows/soul-md-why-50-lines-matter-more-than-your-model` |
+| I'm Not Sharing My SOUL.md. I'm Sharing Something More Useful. | Why a SOUL.md is an operating contract, not a personality hack — plus a sanitize... | `/flows/soul-md-operating-contract-template` |
+| The 170-Line SOUL.md That Made My Hermes Agent Dangerous | Why a single 170-line markdown file — not a secret model or magic framework — is... | `/flows/170-line-soul-md-that-made-hermes-dangerous` |
+| 10 Real Hermes Agent Settings That Actually Matter | A no-nonsense rundown of the real Hermes configuration that moves the needle — i... | `/flows/10-hermes-settings-that-matter` |
 
 ## Desktop & GUI
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| Hermes Desktop Full Tour | Hands-on walkthrough of the native Electron app — settings UI, live tool output, file browser, voice, remote-backend | `/flows/hermes-desktop-full-tour` |
+| Hermes Desktop: a full tour of the native GUI for Hermes Agent | A hands-on walkthrough of Hermes Desktop — the native Electron app that wraps th... | `/flows/hermes-desktop-full-tour` |
 
 ## Engineering Automation
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| 4 Agents → PRs for $12 | Event-driven workflow: 4 specialized agents handle ticket intake, coding, review, CI — humans keep merge authority | `/flows/jira-to-pr-four-agents` |
+| How we used four AI agents to turn Jira tickets into reviewed PRs for about $12 each | An event-driven engineering workflow where four specialized Hermes agents handle... | `/flows/jira-to-pr-four-agents` |
 
 ## Guides
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| Hidden Features | Community-sourced lesser-known commands — /handoff, -c, compression, /browser connect, REST API, desktop, /steer, claude-code | `/flows/hidden-hermes-features-you-should-know` |
-| Full Guide: Architecture | Architecture, setup, and the self-improving loop — comprehensive overview | `/flows/hermes-full-guide-architecture-setup-self-improving-loop` |
-| Zero to Self-Improving | Complete guide from installation to autonomous self-improving employee | `/flows/hermes-complete-guide-zero-to-self-improving` |
+| The 15 Levels of Hermes Agent Usage | A complete roadmap of Hermes Agent mastery, from your first one-shot prompt to a... | `/flows/15-levels-of-hermes-agent-usage` |
+| Hidden Features in Hermes You Should Know About | A community-sourced collection of lesser-known Hermes Agent commands and behavio... | `/flows/hidden-hermes-features-you-should-know` |
+| Hermes Agent FULL GUIDE: Architecture, Setup, and the Self-Improving Loop | A complete walkthrough of how Hermes is put together — installation, model routi... | `/flows/hermes-full-guide-architecture-setup-self-improving-loop` |
+| Hermes Agent: The Complete Guide — From Zero to Self-Improving AI Employee | An end-to-end guide to running Hermes Agent 24/7: installation, model selection,... | `/flows/hermes-complete-guide-zero-to-self-improving` |
 
 ## Integrations
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| Grok Three Superpowers | Three new capabilities when combining Hermes with Grok — X search, deep research, image gen | `/flows/hermes-grok-three-new-superpowers` |
+| Hermes + Grok: Three New Superpowers That Change the Workflow | If you already pay for X Premium, you already have Grok. Connect it to Hermes wi... | `/flows/hermes-grok-three-new-superpowers` |
 
 ## Memory & Context
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| Context OS for Agent | Building a context operating system — beyond basic memory with SQLite, MCP, structured knowledge | `/flows/context-os-for-hermes-agent` |
+| Forget About Memory: Building a Context OS for Your Hermes Agent | Most AI memory is a sticky note. This flow breaks down an 11-layer context archi... | `/flows/context-os-for-hermes-agent` |
 
 ## Multi-Agent
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| 3-Agent Research Dept | Hermes + NotebookLM + Obsidian — a research department that gets smarter every day | `/flows/3-agent-research-department-notebooklm-obsidian` |
+| Hermes + NotebookLM + Obsidian: Build a 3-Agent Research Department That Gets Smarter Every Day | A three-profile Hermes setup where Scout finds signals, Analyst synthesizes thro... | `/flows/3-agent-research-department-notebooklm-obsidian` |
 
 ## Orchestration
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| Become a Hermes Operator | From single install to control room — orchestrating specialist agents on one VPS | `/flows/how-to-become-a-hermes-agent-operator` |
-| Dominate with Kanban | Mastering the Hermes Kanban board for project management and multi-agent work | `/flows/dominate-projects-with-hermes-kanban` |
+| How to Become a Hermes Agent Operator | Go from a single Hermes install to a control room orchestrating a team of specia... | `/flows/how-to-become-a-hermes-agent-operator` |
+| How to Dominate Projects with the Hermes Agent Kanban Board | One agent is the wrong unit once work grows teeth. This field manual shows how t... | `/flows/dominate-projects-with-hermes-kanban` |
 
 ## Security
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| Bitwarden Security Stack | The security stack AI agents actually need — secrets management with Bitwarden + iron-proxy | `/flows/hermes-bitwarden-security-stack` |
+| Hermes x Bitwarden: The Security Stack AI Agents Actually Need | How Hermes Agent ships credential management (Bitwarden Secrets Manager) and cre... | `/flows/hermes-bitwarden-security-stack` |
 
 ## Self-Improvement
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| Hermes Dreaming | Reviewable self-improvement — the agent proposes changes to itself that you review | `/flows/hermes-dreaming-reviewable-self-improvement` |
+| Introducing Hermes Dreaming: Reviewable Self-Improvement for Hermes Agent | Hermes Dreaming is a staged, artifact-first self-improvement engine for Hermes A... | `/flows/hermes-dreaming-reviewable-self-improvement` |
 
 ## Trading
 
 | Flow | Summary | URL |
 |------|---------|-----|
-| Polymarket Self-Learning | A self-learning up/down trading agent with Hermes + Polymarket + Telegram | `/flows/hermes-polymarket-self-learning-trading-agent` |
-
----
-
-## Intent-Based Routing
-
-When a user asks a question, match to the closest intent:
-
-| User says... | Route to |
-|---|---|
-| "How do I write a SOUL.md?" | SOUL.md Operating Contract |
-| "What can Hermes do that I don't know about?" | Hidden Features |
-| "How do people use Hermes for automation?" | /goal Playbook, 10 Hacks |
-| "How do I run Hermes overnight?" | 9-Hour Overnight Workflow |
-| "How do I set up multi-agent?" | Become a Operator, Dominate with Kanban |
-| "How do I use Kanban?" | Dominate with Kanban |
-| "How do I automate X/Twitter?" | Hermes + xurl System, Grok + Telegram |
-| "How do I do code review automation?" | 4 Agents → PRs for $12 |
-| "How do I manage secrets?" | Bitwarden Security Stack |
-| "How do I make Hermes better over time?" | 8 Loops, Hermes Dreaming |
-| "What settings should I change?" | 10 Real Settings |
-| "How do I use the desktop app?" | Hermes Desktop Full Tour |
-| "How do I build a research team?" | 3-Agent Research Dept |
-| "How do I trade with Hermes?" | Polymarket Self-Learning |
-| "How do I get started?" | Zero to Self-Improving |
+| Hermes + Polymarket: A Self-Learning Up/Down Trading Agent | A step-by-step guide to building a self-learning Hermes agent that trades Polyma... | `/flows/hermes-polymarket-self-learning-trading-agent` |

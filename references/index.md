@@ -1,7 +1,7 @@
-# Full Documentation Index — 169 Pages
+# Full Documentation Index
 
 Source: https://www.hermesbible.com
-All URLs are relative to `https://www.hermesbible.com`
+Last updated: 2026-06-22
 
 ---
 
@@ -80,14 +80,14 @@ All URLs are relative to `https://www.hermesbible.com`
 | SMS (Twilio) | `/docs/user-guide/messaging/sms` |
 | Matrix | `/docs/user-guide/messaging/matrix` |
 | Mattermost | `/docs/user-guide/messaging/mattermost` |
-| Home Assistant | `/docs/user-guide/messaging/homeassistant` |
+| Home Assistant Integration | `/docs/user-guide/messaging/homeassistant` |
 | Webhooks | `/docs/user-guide/messaging/webhooks` |
 | BlueBubbles (iMessage) | `/docs/user-guide/messaging/bluebubbles` |
 | DingTalk | `/docs/user-guide/messaging/dingtalk` |
 | Feishu / Lark | `/docs/user-guide/messaging/feishu` |
 | Google Chat | `/docs/user-guide/messaging/google_chat` |
 | LINE | `/docs/user-guide/messaging/line` |
-| Microsoft Graph Webhook | `/docs/user-guide/messaging/msgraph-webhook` |
+| Microsoft Graph Webhook Listener | `/docs/user-guide/messaging/msgraph-webhook` |
 | ntfy | `/docs/user-guide/messaging/ntfy` |
 | Open WebUI | `/docs/user-guide/messaging/open-webui` |
 | Photon iMessage | `/docs/user-guide/messaging/photon` |
@@ -95,7 +95,7 @@ All URLs are relative to `https://www.hermesbible.com`
 | SimpleX Chat | `/docs/user-guide/messaging/simplex` |
 | Teams Meetings | `/docs/user-guide/messaging/teams-meetings` |
 | Microsoft Teams | `/docs/user-guide/messaging/teams` |
-| WeCom Callback | `/docs/user-guide/messaging/wecom-callback` |
+| WeCom Callback (Self-Built App) | `/docs/user-guide/messaging/wecom-callback` |
 | WeCom (Enterprise WeChat) | `/docs/user-guide/messaging/wecom` |
 | Weixin (WeChat) | `/docs/user-guide/messaging/weixin` |
 | WhatsApp Business (Cloud API) | `/docs/user-guide/messaging/whatsapp-cloud` |
@@ -108,11 +108,11 @@ All URLs are relative to `https://www.hermesbible.com`
 | Bitwarden Secrets Manager | `/docs/user-guide/secrets/bitwarden` |
 | Secrets | `/docs/user-guide/secrets/index` |
 
-## Skills (1 page)
+## Skills (1 pages)
 
 | Page | URL |
 |------|-----|
-| Google Workspace | `/docs/user-guide/skills/google-workspace` |
+| Google Workspace — Gmail, Calendar, Drive, Sheets & Docs | `/docs/user-guide/skills/google-workspace` |
 
 ## Using Hermes (15 pages)
 
@@ -123,16 +123,16 @@ All URLs are relative to `https://www.hermesbible.com`
 | Configuration | `/docs/user-guide/configuration` |
 | Configuring Models | `/docs/user-guide/configuring-models` |
 | Sessions | `/docs/user-guide/sessions` |
-| Profiles | `/docs/user-guide/profiles` |
+| Profiles: Running Multiple Agents | `/docs/user-guide/profiles` |
 | Git Worktrees | `/docs/user-guide/git-worktrees` |
 | Docker | `/docs/user-guide/docker` |
 | Security | `/docs/user-guide/security` |
-| Checkpoints & /rollback | `/docs/user-guide/checkpoints-and-rollback` |
+| Checkpoints and /rollback | `/docs/user-guide/checkpoints-and-rollback` |
 | Desktop App | `/docs/user-guide/desktop` |
-| Running Many Gateways | `/docs/user-guide/multi-profile-gateways` |
-| Profile Distributions | `/docs/user-guide/profile-distributions` |
-| Windows (Native) | `/docs/user-guide/windows-native` |
-| Windows (WSL2) | `/docs/user-guide/windows-wsl-quickstart` |
+| Running Many Gateways at Once | `/docs/user-guide/multi-profile-gateways` |
+| Profile Distributions: Share a Whole Agent | `/docs/user-guide/profile-distributions` |
+| Windows (Native) Guide | `/docs/user-guide/windows-native` |
+| Windows (WSL2) Guide | `/docs/user-guide/windows-wsl-quickstart` |
 
 ## Integrations (3 pages)
 
@@ -148,34 +148,34 @@ All URLs are relative to `https://www.hermesbible.com`
 |------|-----|
 | Tips & Best Practices | `/docs/guides/tips` |
 | Run Local LLMs on Mac | `/docs/guides/local-llm-on-mac` |
-| Daily Briefing Bot | `/docs/guides/daily-briefing-bot` |
-| Team Telegram Assistant | `/docs/guides/team-telegram-assistant` |
-| Python Library | `/docs/guides/python-library` |
+| Tutorial: Daily Briefing Bot | `/docs/guides/daily-briefing-bot` |
+| Tutorial: Team Telegram Assistant | `/docs/guides/team-telegram-assistant` |
+| Using Hermes as a Python Library | `/docs/guides/python-library` |
 | Use MCP with Hermes | `/docs/guides/use-mcp-with-hermes` |
-| Voice Mode Guide | `/docs/guides/use-voice-mode-with-hermes` |
-| SOUL.md Guide | `/docs/guides/use-soul-with-hermes` |
-| Build a Plugin | `/docs/guides/build-a-hermes-plugin` |
-| Automate with Cron | `/docs/guides/automate-with-cron` |
+| Use Voice Mode with Hermes | `/docs/guides/use-voice-mode-with-hermes` |
+| Use SOUL.md with Hermes | `/docs/guides/use-soul-with-hermes` |
+| Build a Hermes Plugin | `/docs/guides/build-a-hermes-plugin` |
+| Automate Anything with Cron | `/docs/guides/automate-with-cron` |
 | Working with Skills | `/docs/guides/work-with-skills` |
-| Delegation Patterns | `/docs/guides/delegation-patterns` |
-| GitHub PR Review Agent | `/docs/guides/github-pr-review-agent` |
+| Delegation & Parallel Work | `/docs/guides/delegation-patterns` |
+| Tutorial: GitHub PR Review Agent | `/docs/guides/github-pr-review-agent` |
 | Automation Blueprints | `/docs/guides/automation-blueprints` |
 | AWS Bedrock | `/docs/guides/aws-bedrock` |
 | Microsoft Foundry | `/docs/guides/azure-foundry` |
-| Script-Only Cron Jobs | `/docs/guides/cron-script-only` |
+| Script-Only Cron Jobs (No LLM) | `/docs/guides/cron-script-only` |
 | Cron Troubleshooting | `/docs/guides/cron-troubleshooting` |
 | Google Gemini | `/docs/guides/google-gemini` |
-| Local Ollama Setup | `/docs/guides/local-ollama-setup` |
-| Microsoft Graph Registration | `/docs/guides/microsoft-graph-app-registration` |
+| Run Hermes Locally with Ollama — Zero API Cost | `/docs/guides/local-ollama-setup` |
+| Register a Microsoft Graph Application | `/docs/guides/microsoft-graph-app-registration` |
 | Migrate from OpenClaw | `/docs/guides/migrate-from-openclaw` |
 | MiniMax OAuth | `/docs/guides/minimax-oauth` |
-| OAuth over SSH | `/docs/guides/oauth-over-ssh` |
-| Operate Teams Pipeline | `/docs/guides/operate-teams-meeting-pipeline` |
-| Pipe Script Output | `/docs/guides/pipe-script-output` |
-| Run with Nous Portal | `/docs/guides/run-hermes-with-nous-portal` |
-| Nemotron 3 Ultra Free | `/docs/guides/run-nemotron-3-ultra-free` |
-| GitHub PR Webhooks | `/docs/guides/webhook-github-pr-review` |
-| xAI Grok OAuth | `/docs/guides/xai-grok-oauth` |
+| OAuth over SSH / Remote Hosts | `/docs/guides/oauth-over-ssh` |
+| Operate the Teams Meeting Pipeline | `/docs/guides/operate-teams-meeting-pipeline` |
+| Pipe Script Output to Messaging Platforms | `/docs/guides/pipe-script-output` |
+| Run Hermes Agent with Nous Portal | `/docs/guides/run-hermes-with-nous-portal` |
+| Run Nemotron 3 Ultra free in Hermes Agent | `/docs/guides/run-nemotron-3-ultra-free` |
+| Automated GitHub PR Comments with Webhooks | `/docs/guides/webhook-github-pr-review` |
+| xAI Grok OAuth (SuperGrok / X Premium+) | `/docs/guides/xai-grok-oauth` |
 
 ## Developer Guide (26 pages)
 
@@ -185,27 +185,27 @@ All URLs are relative to `https://www.hermesbible.com`
 | Architecture | `/docs/developer-guide/architecture` |
 | Agent Loop Internals | `/docs/developer-guide/agent-loop` |
 | Prompt Assembly | `/docs/developer-guide/prompt-assembly` |
-| Context Compression & Caching | `/docs/developer-guide/context-compression-and-caching` |
+| Context Compression and Caching | `/docs/developer-guide/context-compression-and-caching` |
 | Gateway Internals | `/docs/developer-guide/gateway-internals` |
 | Session Storage | `/docs/developer-guide/session-storage` |
-| Provider Runtime | `/docs/developer-guide/provider-runtime` |
+| Provider Runtime Resolution | `/docs/developer-guide/provider-runtime` |
 | Adding Tools | `/docs/developer-guide/adding-tools` |
 | Adding Providers | `/docs/developer-guide/adding-providers` |
-| Adding Platform Adapters | `/docs/developer-guide/adding-platform-adapters` |
+| Adding a Platform Adapter | `/docs/developer-guide/adding-platform-adapters` |
 | Creating Skills | `/docs/developer-guide/creating-skills` |
 | Extending the CLI | `/docs/developer-guide/extending-the-cli` |
 | ACP Internals | `/docs/developer-guide/acp-internals` |
 | Browser CDP Supervisor | `/docs/developer-guide/browser-supervisor` |
 | Context Engine Plugins | `/docs/developer-guide/context-engine-plugin` |
 | Cron Internals | `/docs/developer-guide/cron-internals` |
-| Image Gen Provider Plugins | `/docs/developer-guide/image-gen-provider-plugin` |
+| Image Generation Provider Plugins | `/docs/developer-guide/image-gen-provider-plugin` |
 | Memory Provider Plugins | `/docs/developer-guide/memory-provider-plugin` |
 | Model Provider Plugins | `/docs/developer-guide/model-provider-plugin` |
 | Plugin LLM Access | `/docs/developer-guide/plugin-llm-access` |
 | Programmatic Integration | `/docs/developer-guide/programmatic-integration` |
 | Tools Runtime | `/docs/developer-guide/tools-runtime` |
 | Trajectory Format | `/docs/developer-guide/trajectory-format` |
-| Video Gen Provider Plugins | `/docs/developer-guide/video-gen-provider-plugin` |
+| Video Generation Provider Plugins | `/docs/developer-guide/video-gen-provider-plugin` |
 | Web Search Provider Plugins | `/docs/developer-guide/web-search-provider-plugin` |
 
 ## Reference (11 pages)
